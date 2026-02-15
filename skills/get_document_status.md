@@ -1,5 +1,12 @@
 ---
+name: notebooklm-status
 description: Check the processing status of a NotebookLM document
+slash_command: /notebooklm:status
+personas:
+  - knowledge_worker
+triggers:
+  - "is my document done processing?"
+  - "status of notebook source"
 ---
 # Get Document Status
 

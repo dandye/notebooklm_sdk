@@ -1,5 +1,12 @@
 ---
+name: upload-notebooklm-doc
 description: Upload a document to a NotebookLM Notebook
+slash_command: /notebooklm:upload
+personas:
+  - knowledge_worker
+triggers:
+  - "upload the pdf"
+  - "add source file to notebooklm"
 ---
 # Upload Document to NotebookLM
 

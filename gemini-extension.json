@@ -4,22 +4,24 @@
   "version": "0.1.0",
   "description": "An MCP Server for managing Google Cloud NotebookLM Enterprise notebooks and documents.",
   "author": "Google",
+  "contextFileName": "GEMINI.md",
   "mcpServers": {
     "notebooklm": {
       "command": "uv",
       "args": ["run", "notebooklm-mcp"]
-      
     }
   },
   "settings": [
     {
-      "name": "NOTEBOOKLM_PROJECT_NUMBER",
+      "name": "Project Number",
+      "envVar": "NOTEBOOKLM_PROJECT_NUMBER",
       "type": "string",
       "description": "The Google Cloud Project Number where NotebookLM Enterprise is enabled (e.g. 1234567890).",
       "required": true
     },
     {
-      "name": "NOTEBOOKLM_LOCATION",
+      "name": "Data Store Location",
+      "envVar": "NOTEBOOKLM_LOCATION",
       "type": "string",
       "description": "The Google Cloud location for your NotebookLM data store.",
       "defaultValue": "global",
@@ -27,26 +29,8 @@
     }
   ],
   "skills": [
-    {
-      "id": "create_notebook_skill",
-      "name": "Create NotebookLM Notebook",
-      "description": "Creates a new NotebookLM Notebook instance",
-      "path": "skills/create_notebook.md",
-      "trigger": "create-notebooklm"
-    },
-    {
-      "id": "upload_document_skill",
-      "name": "Upload Document to NotebookLM",
-      "description": "Upload a PDF document to a NotebookLM source",
-      "path": "skills/upload_document.md",
-      "trigger": "upload-notebooklm-doc"
-    },
-    {
-      "id": "get_document_status_skill",
-      "name": "Get Document Status",
-      "description": "Check the processing status of an uploaded document using NotebookLM",
-      "path": "skills/get_document_status.md",
-      "trigger": "notebooklm-status"
-    }
+    "skills/create_notebook.md",
+    "skills/upload_document.md",
+    "skills/get_document_status.md"
   ]
 }

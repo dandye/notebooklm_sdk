@@ -1,5 +1,12 @@
 ---
+name: create-notebooklm
 description: Create a NotebookLM Notebook
+slash_command: /notebooklm:create
+personas:
+  - knowledge_worker
+triggers:
+  - "create a new notebook"
+  - "initialize a workspace"
 ---
 # Create NotebookLM Notebook
 
