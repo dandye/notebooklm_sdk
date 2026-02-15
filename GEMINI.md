@@ -9,15 +9,26 @@ This repository contains a Python SDK and an MCP Server for interacting with Not
 
 ## Usage Environments
 
-### 1. As a Python SDK
-You can import the `NotebookLMClient` from `notebooklm_sdk` to use within your own Python applications.
+### 1. As a Gemini CLI Extension (Native Skills and Commands)
+This package is fully configured as a Gemini CLI extension via `gemini-extension.json`. 
 
-### 2. As an MCP Server (Gemini CLI / Claude Desktop)
+**Installation**
+```bash
+gemini extension install git https://github.com/YOUR_USERNAME/notebooklm_sdk.git
+```
+*Note: The interactive installation wizard will automatically prompt you for your `NOTEBOOKLM_PROJECT_NUMBER`.*
+
+**Available Commands & Skills:**
+- `create-notebooklm "Title"`: Create a new NotebookLM Notebook.
+- `upload-notebooklm-doc <notebook_id> <file_path> <display_name>`: Upload a PDF document.
+- `notebooklm-status <notebook_id> <source_id>`: Check processing status.
+
+### 2. As an MCP Server (Claude Desktop / Remote MCP)
 This package uses `FastMCP` to expose its tools via STDIO. 
-When used with the Gemini CLI, the `gemini-extension.json` ensures you are seamlessly prompted for the required `NOTEBOOKLM_PROJECT_NUMBER` environment variable via the ConfigWizard.
+Configure the MCP Client to execute `notebooklm-mcp`.
 
-### 3. As a Standalone CLI
-You can use the `notebooklm` command line utility directly in your terminal for manual operations. It automatically loads variables from a `.env` file via `python-dotenv`.
+### 3. As a Standalone CLI / Python SDK
+You can use the `notebooklm` Typer CLI directly in your terminal, or import `NotebookLMClient` from `notebooklm_sdk` to use within your own Python applications. It automatically loads variables from a `.env` file via `python-dotenv`.
 
 ## Development Notes
 - The API explicitly requires the `/upload/v1alpha/` prefix when posting documents.
