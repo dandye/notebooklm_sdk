@@ -26,42 +26,26 @@
       "required": false
     }
   ],
-  "commands": [
-    {
-      "id": "create_notebook",
-      "name": "Create NotebookLM Notebook",
-      "description": "Creates a new NotebookLM Notebook instance",
-      "executable": "commands/create_notebook.sh",
-      "trigger": "create-notebooklm"
-    },
-    {
-      "id": "get_document_status",
-      "name": "Get Document Status",
-      "description": "Get the status of an uploaded document in NotebookLM",
-      "executable": "commands/get_document_status.sh",
-      "trigger": "notebooklm-status"
-    }
-  ],
   "skills": [
     {
       "id": "create_notebook_skill",
       "name": "Create NotebookLM Notebook",
       "description": "Creates a new NotebookLM Notebook instance",
-      "executable": "commands/create_notebook.sh",
+      "path": "skills/create_notebook.md",
       "trigger": "create-notebooklm"
     },
     {
       "id": "upload_document_skill",
       "name": "Upload Document to NotebookLM",
       "description": "Upload a PDF document to a NotebookLM source",
-      "executable": "skills/upload_document.py",
+      "path": "skills/upload_document.md",
       "trigger": "upload-notebooklm-doc"
     },
     {
       "id": "get_document_status_skill",
       "name": "Get Document Status",
       "description": "Check the processing status of an uploaded document using NotebookLM",
-      "executable": "skills/get_document_status.py",
+      "path": "skills/get_document_status.md",
       "trigger": "notebooklm-status"
     }
   ]
