@@ -19,9 +19,9 @@ gemini extension install git https://github.com/dandye/notebooklm_sdk.git
 *Note: The interactive installation wizard will automatically prompt you for your `NOTEBOOKLM_PROJECT_NUMBER`.*
 
 **Available Commands & Skills:**
-- `create-notebooklm "Title"`: Create a new NotebookLM Notebook.
-- `upload-notebooklm-doc <notebook_id> <file_path> <display_name>`: Upload a PDF document.
-- `notebooklm-status <notebook_id> <source_id>`: Check processing status.
+- `/notebooklm:create "Title"`:
+- `/notebooklm:upload <notebook_id> <file_path> <display_name>`:
+- `/notebooklm:status <notebook_id> <source_id>`:
 
 ### 2. As an MCP Server (Claude Desktop / Remote MCP)
 This package uses `FastMCP` to expose its tools via STDIO. 

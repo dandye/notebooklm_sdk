@@ -16,7 +16,7 @@ This SDK doubles as a native [Gemini CLI](https://github.com/GoogleCloudPlatform
    - `NOTEBOOKLM_PROJECT_NUMBER`: Your Google Cloud Project Number where NotebookLM is hosted.
    - `NOTEBOOKLM_LOCATION`: The target region (defaults to `global`).
 
-Once installed, you can use commands natively via the CLI (e.g., `gemini run create-notebooklm`).
+Once installed, you can use commands natively via the CLI using slash shortcuts (e.g., `/notebooklm:create "My Notebook"`).
 
 ---
 
