@@ -8,7 +8,11 @@
   "mcpServers": {
     "notebooklm": {
       "command": "uv",
-      "args": ["run", "notebooklm-mcp"]
+      "args": ["run", "notebooklm-mcp"],
+      "env": {
+        "NOTEBOOKLM_PROJECT_NUMBER": "${NOTEBOOKLM_PROJECT_NUMBER}",
+        "NOTEBOOKLM_LOCATION": "${NOTEBOOKLM_LOCATION}"
+      }
     }
   },
   "settings": [
