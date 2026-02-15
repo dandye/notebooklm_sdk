@@ -1,0 +1,1 @@
+prompt = "Run the create-notebook_skill to create a new NotebookLM notebook titled `{{args}}`."

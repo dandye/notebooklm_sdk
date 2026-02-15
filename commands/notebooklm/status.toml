@@ -1,0 +1,1 @@
+prompt = "Run the get_document_status_skill using notebook id `{{args}}` and source id `{{args}}`."

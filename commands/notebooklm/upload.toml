@@ -1,0 +1,1 @@
+prompt = "Run the upload_document_skill to upload the PDF at file path `{{args}}` to notebook id `{{args}}`. The display name should also be `{{args}}`. Ask me for any missing parameters."
