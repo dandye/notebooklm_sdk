@@ -15,7 +15,7 @@ source_id = sys.argv[2]
 
 # Delegate to the installed CLI tool
 result = subprocess.run(
-    ["notebooklm", "get-document-status", notebook_id, source_id],
+    ["uv", "run", "notebooklm", "get-document-status", notebook_id, source_id],
     capture_output=True,
     text=True
 )

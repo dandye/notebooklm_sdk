@@ -16,7 +16,7 @@ display_name = sys.argv[3]
 
 # Delegate to the installed CLI tool
 result = subprocess.run(
-    ["notebooklm", "upload-document", notebook_id, file_path, display_name],
+    ["uv", "run", "notebooklm", "upload-document", notebook_id, file_path, display_name],
     capture_output=True,
     text=True
 )

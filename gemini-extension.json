@@ -6,8 +6,9 @@
   "author": "Google",
   "mcpServers": {
     "notebooklm": {
-      "command": "notebooklm-mcp",
-      "args": []
+      "command": "uv",
+      "args": ["run", "notebooklm-mcp"]
+      
     }
   },
   "settings": [

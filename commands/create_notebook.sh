@@ -1,4 +1,4 @@
 #!/bin/bash
 # Description: Create a NotebookLM notebook
-# Usage: notebooklm create-notebook "My Awesome Notebook"
-notebooklm create-notebook "$1"
+# Usage: uv run notebooklm create-notebook "My Awesome Notebook"
+uv run notebooklm create-notebook "$1"
