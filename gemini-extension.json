@@ -1,6 +1,6 @@
 {
   "id": "notebooklm",
-  "name": "NotebookLM Enterprise",
+  "name": "notebooklm-enterprise",
   "version": "0.1.0",
   "description": "An MCP Server for managing Google Cloud NotebookLM Enterprise notebooks and documents.",
   "author": "Google",
