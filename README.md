@@ -8,7 +8,7 @@ This SDK doubles as a native [Gemini CLI](https://github.com/GoogleCloudPlatform
 
 1. **Install the Extension via Git:**
    ```bash
-   gemini extension install git https://github.com/YOUR_USERNAME/notebooklm_sdk.git
+   gemini extension install git https://github.com/dandye/notebooklm_sdk.git
    ```
 
 2. **Configuration Prompts:**
