@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "notebooklm-sdk"
+version = "0.1.0"
+description = "A Python SDK for interacting with NotebookLM Enterprise using the Google Cloud Discovery Engine API."
+readme = "README.md"
+authors = [{ name = "Dan Dye", email = "dandye@users.noreply.github.com" }]
+requires-python = ">=3.8"
+dependencies = [
+    "requests",
+    "google-auth",
+    "mcp[cli]",
+    "typer",
+    "python-dotenv"
+]
+
+[project.scripts]
+notebooklm-mcp = "notebooklm_sdk.server:main"
+notebooklm = "notebooklm_sdk.cli:main"

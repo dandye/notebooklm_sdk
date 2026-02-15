@@ -1,0 +1,67 @@
+{
+  "id": "notebooklm",
+  "name": "NotebookLM Enterprise",
+  "version": "0.1.0",
+  "description": "An MCP Server for managing Google Cloud NotebookLM Enterprise notebooks and documents.",
+  "author": "Google",
+  "mcpServers": {
+    "notebooklm": {
+      "command": "notebooklm-mcp",
+      "args": []
+    }
+  },
+  "settings": [
+    {
+      "name": "NOTEBOOKLM_PROJECT_NUMBER",
+      "type": "string",
+      "description": "The Google Cloud Project Number where NotebookLM Enterprise is enabled (e.g. 1234567890).",
+      "required": true
+    },
+    {
+      "name": "NOTEBOOKLM_LOCATION",
+      "type": "string",
+      "description": "The Google Cloud location for your NotebookLM data store.",
+      "defaultValue": "global",
+      "required": false
+    }
+  ],
+  "commands": [
+    {
+      "id": "create_notebook",
+      "name": "Create NotebookLM Notebook",
+      "description": "Creates a new NotebookLM Notebook instance",
+      "executable": "commands/create_notebook.sh",
+      "trigger": "create-notebooklm"
+    },
+    {
+      "id": "get_document_status",
+      "name": "Get Document Status",
+      "description": "Get the status of an uploaded document in NotebookLM",
+      "executable": "commands/get_document_status.sh",
+      "trigger": "notebooklm-status"
+    }
+  ],
+  "skills": [
+    {
+      "id": "create_notebook_skill",
+      "name": "Create NotebookLM Notebook",
+      "description": "Creates a new NotebookLM Notebook instance",
+      "executable": "commands/create_notebook.sh",
+      "trigger": "create-notebooklm"
+    },
+    {
+      "id": "upload_document_skill",
+      "name": "Upload Document to NotebookLM",
+      "description": "Upload a PDF document to a NotebookLM source",
+      "executable": "skills/upload_document.py",
+      "trigger": "upload-notebooklm-doc"
+    },
+    {
+      "id": "get_document_status_skill",
+      "name": "Get Document Status",
+      "description": "Check the processing status of an uploaded document using NotebookLM",
+      "executable": "skills/get_document_status.py",
+      "trigger": "notebooklm-status"
+    }
+  ]
+}
