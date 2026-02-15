@@ -14,7 +14,7 @@ This package is fully configured as a Gemini CLI extension via `gemini-extension
 
 **Installation**
 ```bash
-gemini extension install git https://github.com/dandye/notebooklm_sdk.git
+gemini extension install https://github.com/dandye/notebooklm_sdk.git
 ```
 *Note: The interactive installation wizard will automatically prompt you for your `NOTEBOOKLM_PROJECT_NUMBER`.*
 
